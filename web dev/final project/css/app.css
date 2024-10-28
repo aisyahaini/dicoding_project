@@ -61,7 +61,6 @@ main {
   margin-inline: auto;
   padding: 2rem 4rem;
   display: flex;
-  display: flex;
   flex-direction: row;
   gap: 40px;
   width: 100%;
@@ -190,7 +189,6 @@ main aside .social-media ul {
   border-bottom-left-radius: 12px;
   margin: auto;
   background-color: #2d3e50;
- 
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -245,8 +243,26 @@ footer {
   background-color: #333;
   color: #ffa500;
   text-align: center;
-  padding: 3px;
+  padding: 10px 20px;
   margin-top: 3px;
-  
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
+@media (max-width: 768px) {
+  footer {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+}
