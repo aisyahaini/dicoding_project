@@ -2,36 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Menambahkan custom CSS untuk memperbesar ukuran font dan slider
-st.markdown("""
-    <style>
-        .css-1d391kg {  /* Title size */
-            font-size: 32px !important;
-        }
-        .css-1v0mbdj {  /* Sidebar labels */
-            font-size: 18px !important;
-        }
-        .css-1v0mbdj select {  /* Sidebar dropdowns */
-            font-size: 18px !important;
-        }
-        .stSlider>div>div>div>input {  /* Slider size */
-            height: 40px !important;
-            width: 400px !important;
-        }
-        .stSlider>div>div>div>input:focus {  /* Slider focus */
-            box-shadow: 0 0 5px 2px #3498db;
-        }
-        .stTextInput>div>div>input {  /* Text input size */
-            font-size: 18px !important;
-        }
-        .stMarkdown>div>div>p {  /* Markdown text size */
-            font-size: 22px !important;
-        }
-        .stSelectbox>div>div>input {  /* Selectbox input font size */
-            font-size: 18px !important;
-        }
-    </style>
-""", unsafe_allow_html=True)
+
 
 # Data dibaca dari file CSV
 df = pd.read_csv("dataset_cleaned.csv")
@@ -40,7 +11,7 @@ df = pd.read_csv("dataset_cleaned.csv")
 df = df.dropna(subset=['weathersit', 'cnt'])
 
 # Judul aplikasi
-st.title("Analisi dan Prediksi Jumlah Peminjaman Sepeda")
+st.title("Analisis dan Prediksi Jumlah Peminjaman Sepeda")
 
 # Memilih parameter analisis
 st.sidebar.title("Parameter Analisis")
